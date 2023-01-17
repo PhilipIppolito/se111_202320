@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Philip Ippolito" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+
+    <!--In Document Styling-->
+    <style>
+        /*In here we write in CSS*/
+
+        /*Sectioing in CSS & JavaScript: select specific elements on a page
+
+            *by element/tag type        EX: body, di, p
+            *by ID attriute             EX: #wrapper, #nav, #footer, #title
+            *Class attribute            EX: Coming in week 3
+        */
+
+        div {/*applis to ALL divs on the page*/
+        
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides of the elements
+            between its contents and its boarder*/
+            margin:5px; /*adds 5px of space to all 4 sides between other elements*/
+
+        }
+
+        #nav {/* # specifies ID name, only applies to single element with that ID*/
+
+            background-color:rgb(200,200,200);
+
+        }
+
+
+    </style>
+</head>
+<body style="background-color:grey">
+    <div id="wrapper"> <!--wraps around" all conent on page-->
+
+        <h1>Philip Ippolito</h1>
+        <!--Nav Section---------------------------------------------------------->
+        <div id="nav">
+
+            <!--Lining to outside pages-->
+            <a href="https://google.com" target="_blank">Visit Google</a>
+            <!--target="_blank" opens page in new ab-->
+
+            <!--In page jump links; linking to sections within the page iself-->
+            <a href="#bio">Bio</a>
+            <a href="#school">School</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#footer">Bottom of Page</a>
+
+
+        </div id="bio">
+        <!--Bio Section---------------------------------------------------------->
+
+        <h2>About Me</h2>
+
+        <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> 
+        a man can be brave.A forked purple lightning bolt, on black field speckled with 
+        four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron 
+        price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between 
+        Kings landing and the wall. It's ten thousand miles between Kings landing and 
+        the wall.</p>
+
+        <!--Image Tag-->
+        <!--Remote imagine link example (absolute path (Not safe))-->
+        <img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-08/220805-border-collie-play-mn-1100-82d2f1.jpg" alt="Close up of a dog" style="width:500px">
+
+        <!--Reativ img link-->
+        <!--Relative neabs: resource file exists in root folder-->
+        <img src="images/stormsEnd.jpg" alt="Illustration of Storms end fom westaros" style="width:500px">
+        <div>
+
+        </div id="school">
+        <!--Schooling Section---------------------------------------------------->
+
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+
+            <img src="images/meca.jpg" alt=" MECA Building face" style="width:500px">
+        <div>
+
+        </div id="hobbies">
+        <!--Hobbies Section------------------------------------------------------>
+
+            <h2>Hobbies</h2>
+
+            <ul>
+                <li>Hobby 1</li>
+                <li>Hobby 2</li>
+                <li>Hobby 3</li>
+                <li>Hobby 4</li>
+            </ul>
+        <div>
+
+        </div id="footer">
+
+            <a href="#wrapper">Back to STop of Paage</a>
+            <p>&copy 2023 | Philip Ippolito | SE111.02 [202320]</p>
+
+            <img src="" alt="Validation Screenshot" style="width:500px">
+        <!--Footer Section------------------------------------------------------->
+        <div>
+
+        </div>
+    </div> <!--End of main div-->
+
+
+</body>
+</html>
