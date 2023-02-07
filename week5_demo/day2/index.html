@@ -5,10 +5,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Philip Ippoltio">
-    <meta name="description" content="W5 Demo">
+    <meta name="description" content="W5D2 Demo">
     <title>W5D2 Demo</title>
 </head>
 <body>
+
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form Without A Table</h2>
+
+    <!--Labels are used to match up with the input elements to be read/processed more esailly in JS
+    For attribute (input element) connects the label attribute value; they must match-->
+
+    <form>
+        <!--firstname-->
+
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname"> 
+        
+        <br>
+        <!--lastname-->
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname">
+
+        <br>
+        <!--email address-->
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="emai">
+
+        <br> <br>
+        <!--Since there is more htne one input element te form needs a submit button in ordr to generate a query string-->
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <h2>Form With A Table</h2>
+    
+    <form>
+        <table>
+            <tbody>
+                <tr> 
+                    <td> <!--first data in row (left)-->
+                        <label for="firstname">First Name:</label>
+                    </td>
+                    <td> <!--first data in row (right)-->
+                        <input type="text" name="firstname" id="firstname">
+                    </td>
+                </tr>
+
+                <tr> 
+                    <td> <!--first data in row (left)-->
+                        <label for="lastname">Last Name:</label>
+                    </td>
+                    <td> <!--first data in row (right)-->
+                        <input type="text" name="lastname" id="lastname">
+                    </td>
+                </tr>
+
+                <tr> 
+                    <td> <!--first data in row (left)-->
+                        <label for="Email">Email:</label>
+                    </td>
+                    <td> <!--first data in row (right)-->
+                        <input type="text" name="Email" id="Email" placeholder="email@gmail.com">
+                    </td>
+                </tr>
+
+                <!--Other types of input below-->
+                <tr>
+                    <td> <!--Left column-->
+                        <label for="comments">Comments:</label>
+                    </td>
+
+                    <td> <!--right column-->
+                        <textarea name="comments" rows="5" cols="21" placeholder="Leave your comments here..."></textarea>
+                    </td>
+                </tr>
+
+                <!--Non text input elements
+                drop down selection - limits to one response, imiless otios works simmilar to a list-->
+
+                <tr>
+                    <td> <!--Left-->
+                        <label for="favcolor">Pick your favorite color:</label>
+                    </td>
+
+                    <td> <!--Rogjt-->
+                        <select name="favcolor">
+                            <!--list eac option in drop down-->
+                            <option value="red">RED</option>
+                            <option value="green">GREEN</option>
+                            <option value="blue">BLUE</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!--radio buttons; limited o one so long as all vlues atch; radio butons are circuluar-->
+
+                <tr>
+
+                    <td>
+                        <label for="study">Progam of Sudy</label>
+
+                    </td>
+
+                    <td>
+                        <input type="radio" name="study" value="SE">Software Engineering <br>
+                        <input type="radio" name="study" value="CYB">Cybersecurity <br>
+                        <input type="radio" name="study" value="WD">Web Development <br>
+                        <input type="radio" name="study" value="NE">Networking <br>
+
+                    </td>
+
+                </tr>
+
+                 <!--Checkboxes - can select mutiple optons-->
+
+                 <tr>
+
+                    <td>
+                        <label for="vechicle"></label>Select your Vehicle(s)
+                    </td>
+
+                    <td>
+                        <input  type="checkbox" name="vechicle1" value="car">Car: <br>
+                        <input  type="checkbox" name="vechicle2" value="roc1">Rockinmte: <br>
+                        <input  type="checkbox" name="vechicle3" value="motercycle">Motercycle: <br>                      
+                    </td>
+
+                </tr>  
+
+                <!--date-->
+
+                <tr>
+
+                    <td>
+                        <label for="date">Date:</label>
+                        
+                    </td>
+
+                    <td>
+                        <input type="date" name="date">          
+                    </td>
+
+                </tr>  
+                
+                <tr> <!--Submit Button-->
+                    <td> <!--first data in row (left)-->
+                    </td>
+                    <td> <!--first data in row (right)-->
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+
+
+
+
+
+            </tbody>
+        </table>
+    </form>
     
 </body>
 </html>
