@@ -7,26 +7,37 @@
     <meta name="author" content="Philip Ippoltio">
     <meta name="description" content="W6 Pay calculator">
     <title>JavaScript Pay calculator</title>
+
+    <style>
+        h1 {
+            padding:20px;
+            padding-top: 50%;
+            margin:auto;
+            font-family: 'poppins', sans-serif;
+            text-align: center;
+
+        }
+    </style>
 </head>
 <body>
 
-    <script>
+    <h1>JavaScript Pay Calculator</h1>
 
+    <script>
         var rate = prompt(`What is your pay Rate? `)
         var hours = prompt(`How many hours did you work? `)
         var tax = prompt(`What is your tax rate`)
 
-        console.log(rate)
-        console.log(hours)
-        console.log(tax)
-
+        var hours = hours * 2
         var gross = rate * hours
         var totaltax = gross * tax
         var net = gross - totaltax
 
+        alert(`Gross Pay: $${gross.toFixed(2)} \nTotal Taxes Deducted: $${totaltax.toFixed(2)} \nTotal Net Pay: $${net.toFixed(2)}`)
 
-
-
+        console.log(`Gross Pay: $${gross.toFixed(2)}`)
+        console.log(`Total Taxes Deducted: $${totaltax.toFixed(2)}`)
+        console.log(`Total Net Pay: $${net.toFixed(2)}`)
     </script>
     
 </body>
