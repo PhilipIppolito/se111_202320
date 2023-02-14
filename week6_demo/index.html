@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Philip Ippoltio">
+    <meta name="description" content="W6D2 Demo">
+    <title>Week 6 JavaScript Demo</title>
+</head>
+<body>
+
+    <!--we should have some type of HTML in the file to start-->
+    <h1>Week 6 Demo | Inroduction to JavaScript</h1>
+
+    <!--script tags usally go after all the intented HTML-->
+    <!--In Document: means the cade lives directly in the files, whitin appropriate tags; <script> for JS or <style> for CSS-->
+    <script>
+
+        //everything inside of the <script> tags must be written in JS
+        //create a varoable - reqiores declaration in order to create/use names
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        /*to acess developer tools are the console;
+                F12 on keybord or tripple dots for browser menu*/
+
+
+        //console.log() is used for development testing
+        console.log(sum) //displays stored value
+        console.log("Hello World!") //displays simple string
+
+        //displaying boh stored data and string message
+        console.log("Hello world! The sum is: " + sum + " Cool, right?") //long way
+        //literal strings; super powerful string types
+        console.log(`Hello world! This sum is: ${sum}.\n\n\n Cool, right?`) //fast way
+
+        //escape sequences fro new line \n or \t for tav still works in strings
+
+        //alert() creates a pop-up with data display for the user to see
+        //alert(); print() in Python for output
+        //user must click the button in the pop-up before code will continue
+        alert(`The sum is: ${sum}!`)
+        console.log("Hi!")
+        alert(sum)
+        console.log("HELLO")
+        alert(`The Sum is: $${sum.toFixed(2)}`) //displaying rounded decimal
+        console.log("Howdy")
+
+        //prompt() creates a pop-up with data displayand also a text field input; allows the user to enter data to be used to later in the <script> | prompt() is simmilar to input() in Python
+
+        //in order to use the vlaue provided by the use we mus assign a var
+        var nameF = prompt(`Enter your first name: `)
+        var nameL = prompt(`Thanks ${nameF}! Please enter your lase name: `)
+        console.log(nameL)
+        
+        //if browser treats prompt() return as a string, cast Number() to use in math
+        var num = Number(prompt(`Enter a number: `))
+        //simmilar in Python to; num = int(input("Enter a Number: "))
+
+        var square = num * num
+        console.log(square.toFixed(2))
+    
+    </script>
+    
+</body>
+</html>

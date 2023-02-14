@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Philip Ippoltio">
+    <meta name="description" content="W6 Pay calculator">
+    <title>JavaScript Pay calculator</title>
+</head>
+<body>
+
+    <script>
+
+        var rate = prompt(`What is your pay Rate? `)
+        var hours = prompt(`How many hours did you work? `)
+        var tax = prompt(`What is your tax rate`)
+
+        console.log(rate)
+        console.log(hours)
+        console.log(tax)
+
+        var gross = rate * hours
+        var totaltax = gross * tax
+        var net = gross - totaltax
+
+
+
+
+    </script>
+    
+</body>
+</html>
