@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W7D2 | Javascript Demo</title>
+</head>
+<body>
+
+    <h1>W7D2 - Javascript Selector & Event Demo</h1>
+
+    <form>
+
+        <table>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="first" class="questions">FIRST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="first" id="first">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="last" class="questions">LAST: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="last" id="last">
+
+                </td>
+            </tr>
+
+            <tr>
+                <!--left side: questions-->
+                <td>
+                    <label for="age" class="questions">AGE: </label>
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    <input type="text" name="age" id="age">
+
+                </td>
+            </tr>
+
+            
+            <tr>
+                <!--left side: questions-->
+                
+                <td>
+                    <br>
+                    <br>
+                   <input type="button" id="enter-button" value="ENTER">
+                </td>
+
+                <!--right side: input values-->
+                <td>
+                    
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+    <br>
+
+    <!--a div to hold some info from the form-->
+
+    <h2 id="hello">Hello</h2>
+
+    <div id="info" style="border:1px solid black; width:500px; height:200px;">
+    
+    </div><!--# info-->
+
+    <br>
+    <br>
+    <br>
+
+    <!--not just buttons can have click events!-->
+
+    <p id="me">
+        Click!
+    </p>
+
+    <p id="you">
+        Click!
+    </p>
+
+    <input type="button" id="submit" value="COOL STUFF!">
+
+    <br><br><br><br><br>
+    <p>end</p>
+    <!--IN-DOCUMENT JAVASCRIPT BELOW-->
+    <script>
+        //selecting elements from HTML docuent --> 'document' current HTML files
+        var body = document.querySelector('body') //selecting by HTML ag name
+
+        console.log(body) //testing in the browser console
+
+        //create a new vairable to hold a new HTML element
+        var newP = ''
+        newP += '<p>' //newP = newP + '<p>'
+        newP += 'hello world! this content was added to the page using JavaScript'
+        newP += '<p>'
+
+        console.log(newP)
+
+        //adding new HTML element info (built in JavaScript to the end of the body element)
+        body.innerHTML += newP
+
+        //accessing HTML attributes
+        body.id = 'main-body'
+        console.log(body)
+
+        
+        //setup an acionable event so that when a button is clicked, infromation is written to the pag . First add event listner for event (active) ; adding an event listenr to the #enter-button at end of the form
+        document.querySelector('#enter-button').addEventListener('click', alertInfo)
+
+        function alertInfo(e)
+        {
+            var fname = document.querySelector('#first').value
+            var lname = document.querySelector('#last').value
+            var age = document.querySelector("#age").value
+
+            console.log(fname, lname, age)
+
+            age = Number(age)
+            console.log(fname, lname, age)
+
+            var full = fname + ' ' + lname
+            alert(`Hi there ${full}!`)
+
+            if(age >= 18)
+            {
+                alert("You are old enough to vote!")
+            }
+            else 
+            {
+                alert("You are too young to vote!")
+            }
+
+            var hello = document.querySelector(`#hello`)
+
+            hello.innerHTML += ` ${full}!`
+
+            var info = document.querySelector(`#info`)
+
+            var dog_age = (age * 7).toFixed(1)
+            var cat_age = (age * 4).toFixed(1)
+
+            console.log(`Dog Age: ${dog_age} years \nCat Age: ${cat_age} years`)
+
+            info.innerHTML += `<p><br> Here is some information on the age you entered <br><br> You age: ${age} <br><br> Dog Age: ${dog_age} years <br><br> Cat Age: ${cat_age} years</p>`
+        }
+
+        var me = document.querySelector(`#me`)
+        var you = document.querySelector(`#you`)
+
+        console.log(me)
+
+        //adding event listener to non-button elements
+        me.addEventListener(`click`, clicked)
+
+        function clicked(e)
+        {
+            console.log(`clicked() reached`)
+            me.style.color = "red"
+        }
+
+        you.addEventListener(`click`, greenClick)
+
+        function greenClick(e)
+        {
+            console.log(`greenClick() reached`)
+            you.style.color = "green"
+            you.style.backgroundColor = 'black'
+        }
+
+        //select another button on the page
+        var button = document.querySelector(`#submit`)
+
+        button.addEventListener(`click`, function(event)
+        {
+            console.log(event)
+        }
+        )
+
+	</script>
+	
+</body>
+</html>
