@@ -104,12 +104,12 @@
     <p>end</p>
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
-        //selecting elements from HTML docuent --> 'document' current HTML files
+        //selecting elements from HTML document --> 'document' current HTML files
         var body = document.querySelector('body') //selecting by HTML ag name
 
         console.log(body) //testing in the browser console
 
-        //create a new vairable to hold a new HTML element
+        //create a new variable to hold a new HTML element
         var newP = ''
         newP += '<p>' //newP = newP + '<p>'
         newP += 'hello world! this content was added to the page using JavaScript'
@@ -125,7 +125,7 @@
         console.log(body)
 
         
-        //setup an acionable event so that when a button is clicked, infromation is written to the pag . First add event listner for event (active) ; adding an event listenr to the #enter-button at end of the form
+        //setup an additional event so that when a button is clicked, information is written to the pag . First add event listener for event (active) ; adding an event listener to the #enter-button at end of the form
         document.querySelector('#enter-button').addEventListener('click', alertInfo)
 
         function alertInfo(e)
