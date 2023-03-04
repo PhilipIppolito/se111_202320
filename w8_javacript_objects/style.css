@@ -1,0 +1,21 @@
+#wrapper {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+#output {
+    text-align: left;
+}
+
+hr {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+table {
+    margin: auto;
+}
